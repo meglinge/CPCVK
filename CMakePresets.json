@@ -1,0 +1,50 @@
+{
+    "version": 4,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 21,
+        "patch": 1
+    },
+    "configurePresets": [
+        {
+            "name": "x64-Debug",
+            "generator": "Ninja",
+            "description": "Debug configuration",
+            "hidden": false,
+            "binaryDir": "out/build/x64-Debug",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            }
+        },
+        {
+            "name": "x64-Release",
+            "generator": "Ninja",
+            "description": "Release configuration",
+            "hidden": false,
+            "binaryDir": "out/build/x64-Release",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "release",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "x64-Release"
+        }
+    ]
+}

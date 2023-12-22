@@ -1,0 +1,14 @@
+﻿# 设置CMake最低版本要求
+cmake_minimum_required(VERSION 3.26)
+# 设置项目名称
+project (CPP)
+
+
+# 设置C++标准
+set(CMAKE_CXX_STANDARD 23)
+
+# 添加源文件
+file(GLOB_RECURSE SrcFile CONFIGURE_DEPEND src/*.cpp src/*.hpp)
+add_executable(CPP ${SrcFile})
+
+
